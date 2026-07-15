@@ -95,7 +95,7 @@ Developed an interactive Power BI dashboard to analyze hotel performance, custom
 
 ## Dashboard Preview
 
-![Hotel Booking Dashboard](images/hotel_booking_dashboard.png)
+![Hotel Booking Dashboard](Images/Hotel_Booking_Dashboard.png)
 
 ---
 
