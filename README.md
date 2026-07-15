@@ -93,9 +93,10 @@ Developed an interactive Power BI dashboard to analyze hotel performance, custom
 * ADR and revenue analysis.
 * Interactive slicers for dynamic filtering.
 
+
 ## Dashboard Preview
 
-![Hotel Booking Dashboard](Images/Hotel_Booking_Dashboard.png)
+![Hotel Booking Dashboard](images/hotel_booking_dashboard.png)
 
 ---
 
