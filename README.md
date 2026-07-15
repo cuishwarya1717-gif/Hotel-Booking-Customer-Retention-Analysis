@@ -35,6 +35,10 @@ Hotels experience significant revenue loss due to booking cancellations and inef
 * Git & GitHub
 * Jupyter Notebook
 
+---
+
+# Project Workflow
+
 ## Week 1: Data Cleaning and Feature Engineering
 
 ### Data Cleaning
@@ -51,6 +55,8 @@ Created business-focused features to enhance analysis:
 * Total Stay Nights
 * Total Guests
 * Total Revenue
+
+---
 
 ## Week 2: Exploratory Data Analysis (EDA)
 
@@ -72,24 +78,86 @@ Created business-focused features to enhance analysis:
 * Online Travel Agency bookings represented the largest booking segment.
 * Special requests and parking requirements showed negative correlation with cancellations.
 
+---
+
+## Week 3: Power BI Dashboard Development
+
+Developed an interactive Power BI dashboard to analyze hotel performance, customer behavior, and revenue trends.
+
+### Dashboard Features
+
+* 5 KPI Cards for key performance metrics.
+* Monthly booking trend analysis.
+* Hotel type comparison (City Hotel vs Resort Hotel).
+* Cancellation analysis.
+* ADR and revenue analysis.
+* Interactive slicers for dynamic filtering.
+
+## Dashboard Preview
+
+![Hotel Booking Dashboard](images/hotel_booking_dashboard.png)
+
+---
+
+## Week 4: Dashboard Enhancement
+
+Improved dashboard usability and business presentation by implementing:
+
+* Implemented a Month Dimension table to enable accurate chronological sorting.
+* Added Business Insights section for management-level interpretation.
+* Improved dashboard layout and visualization clarity.
+
+---
+
+## Business Insights
+
+* Peak bookings are observed during July and August.
+* City Hotels experience higher cancellation rates compared to Resort Hotels.
+* ADR increases during high-demand periods.
+* Longer lead times indicate higher cancellation risk.
+* Dynamic pricing strategies can help improve revenue optimization.
+
+---
+
 ## Repository Structure
 
-Data/
+```text
+Hotel-Booking-Customer-Retention-Analysis/
 
-* hotel_bookings.csv
-* hotel_bookings_cleaned.csv
+├── Data/
+│   ├── hotel_bookings.csv
+│   └── hotel_bookings_cleaned.csv
 
-notebooks/
+├── notebooks/
+│   ├── 1-Data_Cleaning.ipynb
+│   └── 2_EDA_and_Statistical_Testing.ipynb
 
-* 1-Data_Cleaning.ipynb
-* 2_EDA and Statistical_Testing.ipynb
+├── PowerBI/
+│   └── Hotel_Booking_Dashboard.pbix
+
+├── images/
+│   └── hotel_booking_dashboard.png
+
+└── README.md
+```
+
+---
 
 ## Current Status
 
-✅ Week 1 Completed
-✅ Week 2 Completed
-🔄 SQL Analysis In Progress
-🔄 Customer Retention Modeling In Progress
-🔄 Power BI Dashboard Development In Progress
+✅ Data Cleaning Completed  
+✅ Feature Engineering Completed  
+✅ Exploratory Data Analysis Completed  
+✅ Statistical Analysis Completed  
+✅ Power BI Dashboard Completed  
+✅ Business Insights Added  
 
+---
+
+## Future Enhancements
+
+* Customer segmentation analysis.
+* Booking demand forecasting.
+* Revenue prediction model.
+* Automated KPI reporting.
 
