@@ -136,13 +136,19 @@ Hotel-Booking-Customer-Retention-Analysis/
 ├── PowerBI/
 │   └── Hotel_Booking_Dashboard.pbix
 
-├── images/
-│   └── hotel_booking_dashboard.png
+├── Presentation/
+│   ├── Week1_Data_Cleaning_and_Feature_Engineering.pptx
+│   └── Week2_EDA_and_Statistical_Analysis.pptx
+
+├── Documentation/
+│   ├── Week3_Report.docx
+│   ├── Week3_Report.pdf
+│   ├── Week4_Report.docx
+│   └── Week4_Report.pdf
+
+├── Hotel_Booking_Dashboard.png
 
 └── README.md
-```
-
----
 
 ## Current Status
 
