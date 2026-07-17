@@ -1,123 +1,262 @@
-# Hotel Booking Customer Retention and Dynamic Pricing Analysis
+# Hotel Booking Customer Retention & Dynamic Pricing Analysis
 
 ## Project Overview
 
-This project analyzes hotel booking data to identify customer booking behavior, cancellation patterns, and factors affecting hotel revenue. The objective is to generate actionable business insights that can improve customer retention and support dynamic pricing strategies.
+This project focuses on analyzing hotel booking data to understand customer behavior, cancellation patterns, pricing trends, and revenue contribution.
 
-## Dataset Size Overview
+The objective of this project is to build an end-to-end analytics solution by performing data cleaning, exploratory analysis, predictive modeling, and developing an interactive Power BI dashboard to support business decision-making.
 
-The analysis is performed on 84,889 hotel booking records from City Hotels and Resort Hotels.
+---
 
-## Business Problem
+# Business Objectives
 
-Hotels experience significant revenue loss due to booking cancellations and ineffective pricing strategies. This project aims to:
-
-* Identify key factors influencing booking cancellations.
-* Analyze customer booking behavior.
-* Explore pricing patterns using ADR (Average Daily Rate).
-* Support data-driven decision-making for customer retention and revenue optimization.
-
-## Dataset Information
-
-* Dataset: Hotel Booking Demand Dataset
-* Total Records: 84,889+
-* Hotel Types: City Hotel and Resort Hotel
-* Features: Booking details, customer information, stay duration, pricing, cancellations, and special requests.
-
-## Tools and Technologies
-
-* Python
-* Pandas
-* NumPy
-* Matplotlib
-* SQL
-* Power BI
-* Git & GitHub
-* Jupyter Notebook
+- Analyze hotel booking trends and customer behavior.
+- Identify factors influencing booking cancellations.
+- Understand revenue contribution across different market segments.
+- Predict potential booking cancellations using machine learning.
+- Build an interactive dashboard for business insights.
 
 ---
 
 # Project Workflow
 
-## Week 1: Data Cleaning and Feature Engineering
+The project was completed in multiple phases:
 
-### Data Cleaning
-
-* Handled missing values and data quality issues.
-* Removed duplicate records.
-* Treated outliers using statistical techniques.
-* Prepared a clean dataset for analysis and modeling.
-
-### Feature Engineering
-
-Created business-focused features to enhance analysis:
-
-* Total Stay Nights
-* Total Guests
-* Total Revenue
+1. Data Cleaning & Feature Engineering
+2. Exploratory Data Analysis & Statistical Testing
+3. Predictive Modeling
+4. Power BI Dashboard Development
+5. Business Insights & Recommendations
 
 ---
 
-## Week 2: Exploratory Data Analysis (EDA)
+# Week 1: Data Cleaning & Feature Engineering
 
-### Analysis Performed
+## Data Preparation
 
-* Hotel Type Distribution
-* Cancellation Analysis
-* Monthly Booking Trends
-* Lead Time Analysis
-* ADR (Average Daily Rate) Analysis
-* Market Segment Analysis
-* Correlation Analysis
+Performed data cleaning and transformation using Python.
 
-### Key Findings
+### Activities Performed
 
-* City Hotels received more bookings than Resort Hotels.
-* Customers who cancelled bookings had significantly higher lead times than those who completed their stay.
-* Cancelled bookings had a higher average ADR (106.33) compared to non-cancelled bookings (70.39).
-* Online Travel Agency bookings represented the largest booking segment.
-* Special requests and parking requirements showed negative correlation with cancellations.
+- Removed missing values.
+- Removed duplicate records.
+- Handled inconsistent data values.
+- Identified and treated ADR outliers using IQR method.
 
----
+## Feature Engineering
 
-## Week 3: Power BI Dashboard Development
+Created new business-focused features:
 
-Developed an interactive Power BI dashboard to analyze hotel performance, customer behavior, and revenue trends.
+### Total Stay Nights
 
-### Dashboard Features
+Combined:
+- Weekend nights
+- Week nights
 
-* 5 KPI Cards for key performance metrics.
-* Monthly booking trend analysis.
-* Hotel type comparison (City Hotel vs Resort Hotel).
-* Cancellation analysis.
-* ADR and revenue analysis.
-* Interactive slicers for dynamic filtering.
+### Total Guests
 
+Combined:
+- Adults
+- Children
+- Babies
 
-## Dashboard Preview
+### Total Revenue
 
-![Hotel Booking Dashboard](hotel_booking_dashboard.png)
+Calculated revenue contribution using:
+
+ADR × Total Stay Nights
+
+These engineered features helped improve customer behaviour analysis and predictive modeling.
 
 ---
 
-## Week 4: Dashboard Enhancement
+# Week 2: Exploratory Data Analysis (EDA)
 
-Improved dashboard usability and business presentation by implementing:
+Performed detailed exploratory analysis to understand booking patterns.
 
-* Implemented a Month Dimension table to enable accurate chronological sorting.
-* Added Business Insights section for management-level interpretation.
-* Improved dashboard layout and visualization clarity.
+## Analysis Performed
+
+- Hotel type comparison.
+- Monthly booking trends.
+- Customer type analysis.
+- Market segment analysis.
+- ADR distribution analysis.
+- Lead time analysis.
+- Cancellation pattern analysis.
+
+## Statistical Analysis
+
+Performed correlation analysis to understand relationships between:
+
+- Cancellation status
+- Lead time
+- ADR
+- Revenue-related variables
 
 ---
 
-## Business Insights
+# Week 3: Predictive Modeling
 
-* Peak bookings are observed during July and August.
-* City Hotels experience higher cancellation rates compared to Resort Hotels.
-* ADR increases during high-demand periods.
-* Longer lead times indicate higher cancellation risk.
-* Dynamic pricing strategies can help improve revenue optimization.
+## Objective
 
+The objective of predictive modeling was to predict whether a booking would be cancelled based on customer and booking characteristics.
+
+## Problem Type
+
+Binary Classification
+
+Target Variable:
+
+```
+is_canceled
+```
+
+## Model Used
+
+### Logistic Regression
+
+Logistic Regression was selected because:
+
+- Suitable for binary classification problems.
+- Easy to interpret.
+- Provides probability-based predictions.
+- Works efficiently as a baseline classification model.
+
+---
+
+## Model Preparation
+
+Before training the model:
+
+- Applied feature encoding for categorical variables.
+- Prepared independent and dependent variables.
+- Split data into training and testing datasets.
+
+---
+
+## Model Evaluation
+
+The model performance was evaluated using:
+
+- Accuracy
+- Precision
+- Recall
+- F1 Score
+- Confusion Matrix
+- ROC Curve
+- AUC Score
+
+These evaluation metrics helped measure how effectively the model identifies cancellation risks.
+
+---
+
+# Week 4: Power BI Dashboard Development
+
+## Dashboard Objective
+
+Developed an interactive executive dashboard to provide business insights related to hotel bookings, revenue, customer segments, and cancellation behaviour.
+
+---
+
+# Dashboard KPIs
+
+The dashboard includes:
+
+## Total Bookings
+
+Shows the overall number of hotel bookings analysed.
+
+## Total Revenue
+
+Represents revenue contribution based on booking information.
+
+## Average Daily Rate (ADR)
+
+Shows average room pricing per night.
+
+## Total Guests
+
+Represents total customer occupancy.
+
+## Cancellation Rate
+
+Shows percentage of cancelled bookings.
+
+---
+
+# Dashboard Visualizations
+
+The dashboard includes:
+
+- Monthly Booking Trend
+- Booking Distribution by Hotel Type
+- Average ADR by Customer Type
+- Revenue Contribution by Market Segment
+- Booking Distribution by Lead Time Group
+- Cancellation Distribution by Hotel Type
+- Cancellation Rate by Market Segment
+
+Interactive slicers were added for:
+
+- Hotel Type
+- Customer Type
+- Market Segment
+
+![Hotel Booking Analytics Dashboard](hotel_booking_dashboard.png)
+
+
+
+---
+
+# Business Insights
+
+Key insights derived from the dashboard:
+
+- City Hotels receive higher booking volumes compared to Resort Hotels.
+- Online Travel Agents contribute significantly to revenue generation.
+- Lead time influences customer booking behaviour.
+- Customer types show differences in ADR values.
+- Cancellation rates vary across different market segments.
+
+---
+
+# Business Recommendations
+
+Based on analysis:
+
+- Improve customer retention through loyalty programs.
+- Optimize pricing strategies using ADR trends.
+- Reduce cancellations through improved booking policies.
+- Focus marketing efforts on high-value segments.
+- Use booking trends for better demand forecasting.
+
+---
+
+# Tools & Technologies Used
+
+## Programming & Analysis
+
+- Python
+- Pandas
+- NumPy
+- Matplotlib
+
+## Database
+
+- MySQL
+- SQL
+
+## Visualization
+
+- Microsoft Power BI
+- Microsoft Excel
+
+## Version Control
+
+- Git
+- GitHub
+
+---
 ---
 
 ## Repository Structure
@@ -132,15 +271,19 @@ Hotel-Booking-Customer-Retention-Analysis/
 ├── notebooks/
 │   ├── 1-Data_Cleaning.ipynb
 │   └── 2_EDA_and_Statistical_Testing.ipynb
+    └── 3_Baseline_Predictive_Modeling.ipynb
+
 
 ├── PowerBI/
 │   └── Hotel_Booking_Dashboard.pbix
 
 ├── Presentation/
-│   ├── Week1_Data_Cleaning_and_Feature_Engineering.pptx
-│   └── Week2_EDA_and_Statistical_Analysis.pptx
+│   ├── Week1 & Week2-project2pptx.pptx
+    ├── Week3 & Week4-project2.pptx   
 
 ├── Documentation/
+
+│   ├── Week1_Week2_Business_Insights.md
 │   ├── Week3_Report.docx
 │   ├── Week3_Report.pdf
 │   ├── Week4_Report.docx
@@ -150,21 +293,54 @@ Hotel-Booking-Customer-Retention-Analysis/
 
 └── README.md
 
-## Current Status
+
+---
+
+# Project Outcome
+
+This project demonstrates an end-to-end analytics workflow:
+
+- Data Cleaning
+- Feature Engineering
+- Exploratory Data Analysis
+- Statistical Analysis
+- Predictive Modeling
+- Machine Learning Evaluation
+- Power BI Dashboard Development
+- Business Recommendation Generation
+
+The project demonstrates how analytics can support customer retention strategies and revenue optimization in the hospitality industry.
+
+---
+
+# Current Status
 
 ✅ Data Cleaning Completed  
 ✅ Feature Engineering Completed  
 ✅ Exploratory Data Analysis Completed  
 ✅ Statistical Analysis Completed  
+✅ Predictive Modeling Completed  
 ✅ Power BI Dashboard Completed  
 ✅ Business Insights Added  
+✅ Final Presentation Completed  
 
 ---
 
-## Future Enhancements
+# Future Enhancements
 
-* Customer segmentation analysis.
-* Booking demand forecasting.
-* Revenue prediction model.
-* Automated KPI reporting.
+- Customer segmentation analysis.
+- Booking demand forecasting.
+- Revenue prediction model.
+- Automated KPI reporting.
 
+---
+
+# Author
+
+**Ishwarya**
+
+B.Sc. Information Technology
+
+Master's in Data Analytics
+
+Data Analytics Intern – Infotact
